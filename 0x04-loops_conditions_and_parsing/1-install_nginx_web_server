@@ -1,0 +1,13 @@
+#!/bin/bash
+
+sudo apt update
+
+sudo apt install nginx -y
+
+sudo service nginx start 
+
+# Add the "listen 80" directive to the appropriate "server" block
+sudo sed -i '/server {/a \    listen 80;' /etc/nginx/nginx.conf
+
+# Add the "location" block to return "Hello World!" on GET request to root
+sudo sed -i '/server {/a \    location / {\n        return 200 "Hello World!";\n    }' /etc/nginx/sites-available/default
