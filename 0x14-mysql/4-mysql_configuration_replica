@@ -40,6 +40,3 @@ log_bin         = /var/log/mysql/mysql-bin.log
 binlog_do_db    = tyrell_corp
 relay-log       = /var/log/mysql/mysql-relay-bin.log
 
-master-host = 34.207.211.216
-master-user = replica_user
-master-password = bismillah1
